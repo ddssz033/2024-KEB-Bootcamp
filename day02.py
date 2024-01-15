@@ -8,3 +8,5 @@ if menu == '1':
 elif menu == '2':
     celsius = float(input('input celsius : '))
     print(f'celsius: {celsius}C, fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
+else:
+    print('terminate program')
