@@ -1,18 +1,10 @@
-base_number = int(input('input base number : '))
-exponent_number = int(input('input exponent number : '))
-#print(f'밑은 {base_number}, 지수는{exponent_number}, 결과값은 {base_number ** exponent_number}')
-print(f'밑은 {base_number}, 지수는 {exponent_number}, 결과값은 {pow(base_number, exponent_number)}')
+# first_number = int(input("first number : "))
+# second_number = int(input("second number : "))
+# quotient = first_number // second_number
+# remainder = first_number // second_number
+# print(f'몫은 {quotient} 나머지는 {remainder}입니다')
 
-#format function
-print('밑은 {1}, 지수는 {0}, 결과값은 {2}.'.format(base_number, exponent_number,pow(base_number, exponent_number)))
-
-#c like
-print('밑은 %d, 지수는 %d, 결과값은 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
-
-# print(type(3.14))
-# print(isinstance(3.14, float))
-#
-# artists = ["BTS", "Newjeans", "ive", "nmixx", "aespa"]
-# groups = artists
-# artists[2] = "seventeen"
-# print(artists, groups)
+first_number = int(input("first number : "))
+second_number = int(input("second number : "))
+print(f'몫은 {divmod(first_number, second_number)[0]} 나머지는 {divmod(first_number, second_number)[1]}입니다')
+#divmod의 첫번째는 몫([0]), 두번째는 나머지([1])
