@@ -11,7 +11,18 @@ print(subjects)
 # print(1e-1)
 # print(0.01)
 # print(1e-2)
-# print(3.14)
-# print(314e-2)
-# print(21000)
-# print(21_000)
+
+#파이썬 키워드들은 변수명으로 사용 불가
+#case-sensitive
+# ok
+abc = 7
+Abc = 8
+ABC = 6
+print(abc, Abc, ABC)
+
+test9 = 77
+# 9test = tt 변수명 숫자로는 시작 못함
+_9test = 11
+print(test9, _9test)
+
+# False = 123 안된다, reserved words
