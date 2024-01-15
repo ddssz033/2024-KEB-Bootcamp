@@ -1,8 +1,3 @@
-dec = 65
-octal = 0o101
-hexadecimal = 0x41
-binary = 0b01000001
-print(dec, octal, hexadecimal, binary)
-print(chr(dec), chr(octal), chr(hexadecimal), chr(binary))
-print(bin(dec), bin(octal), bin(hexadecimal), bin(binary))
-print(ord('B'), ord('Z'), ord('A'), ord('2'))
+# (100°F − 32) × 5/9 = 37.778°C
+fahrenheit = float(input('input fahrenheit : '))
+print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit - 32.0) * 5/9):.4f100}C')
