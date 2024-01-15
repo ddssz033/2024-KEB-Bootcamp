@@ -1,6 +1,13 @@
 base_number = int(input('input base number : '))
 exponent_number = int(input('input exponent number : '))
-print(f'밑은 {base_number}, 지수는{exponent_number}, 결과값은 {base_number ** exponent_number}')
+#print(f'밑은 {base_number}, 지수는{exponent_number}, 결과값은 {base_number ** exponent_number}')
+print(f'밑은 {base_number}, 지수는 {exponent_number}, 결과값은 {pow(base_number, exponent_number)}')
+
+#format function
+print('밑은 {1}, 지수는 {0}, 결과값은 {2}.'.format(base_number, exponent_number,pow(base_number, exponent_number)))
+
+#c like
+print('밑은 %d, 지수는 %d, 결과값은 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
 
 # print(type(3.14))
 # print(isinstance(3.14, float))
