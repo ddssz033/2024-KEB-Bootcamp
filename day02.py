@@ -26,3 +26,11 @@ _9test = 11
 print(test9, _9test)
 
 # False = 123 안된다, reserved words
+
+print(type(3.14))
+print(isinstance(3.14, float))
+
+artists = ["BTS", "Newjeans", "ive", "nmixx", "aespa"]
+groups = artists
+artists[2] = "seventeen"
+print(artists, groups)
