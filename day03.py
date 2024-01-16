@@ -1,8 +1,15 @@
-#join: 리스트를 문자열로, 원소사이 구분기호들을 임의로 붙일수 있다
-subjects = ["python", "c++", "database"]
-subjects_string = "/".join(subjects)
-print(subjects_string)
+course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
+print(course.find('KEB')) #마이너스가 뜰 경우 찾지 못함
+print(course.rfind('KEB')) #뒤부터 찾는다
+print(course.find('Inha')) #-1
+# print(course.index('Inha')) #valueerror
+print(course)
+course = course.replace('KEB', 'Inha', 1)
+print(course)
+print(course.strip())
+print(course.strip("!#.*"))
+# print(course)
+# course = course.replace('KEB', "Inha")
+# print(course)
 
-numbers = input("firstnum secondnum : ").split() # 문자열을 리스트로
-print(int(numbers[0]) + int(numbers[1]))
-
+#strip: 불필요한 공백을 없애줌, 특정 문자를 없앨수도 있다, 양쪽 끝만 제거
