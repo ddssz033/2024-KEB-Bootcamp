@@ -1,9 +1,18 @@
-# 값을 찾지 못할 시 -1이 아닌 valueerror을 출력하는 index를 사용할 경우
+#prime number
+number = int(input("input number : "))
+cnt = 0
+i = 1
+while i <= number:
+    if number % i == 0:
+        cnt = cnt + 1
+    i = i + 1
 
-subjects = "python c++ database linux"
-subject = input("과목 입력: ")
-#예외 처리 필요
-try: #정상작동하는 경우
-    print(f"해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다")
-except ValueError: #못찾은 경우(ValueError)
-    print('해당 과목이 없습니다')
+if cnt == 2: #나누어 떨어지는 수가 1과 자기 자신뿐인 경우
+    print(f'{number} is prime number')
+else: #그외(소수가 아님)
+    print(f'{number} is not prime number')
+
+
+
+# subjects = {'python':'kim', 'c++': 'sung', 'datastructure': 'kim', 'db': 'kang'}
+# print("{0[python]} {0[datastructure]}".format(subjects))
