@@ -16,3 +16,21 @@ print()
 
 for k in range(0, len(univ)): #0부터 univ의 길이까지
     print(univ[k], end=' ')
+
+#primenumber for ver
+#prime number
+number = int(input("input number : "))
+is_prime = True #int -> bool
+
+if number < 2:
+  print(f'{number} is not prime number')
+else:
+  for i in range(2, number):
+    if number % 1 == 0:
+      is_prime = False
+      break
+
+  if is_prime:
+    print(f'{number} is prime number')
+  else:
+    print(f'{number} is not prime number')
