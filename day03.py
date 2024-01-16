@@ -1,11 +1,8 @@
-while True:
-  menu = input("1) fahrenheit -> celsius 2) celsius -> fahrenheit 3) quit program : ")
-  if menu == '1':
-    fahrenheit = float(input('input fahrenheit : '))
-    print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit - 32.0) * 5/9):.4f}C')
-  elif menu == '2':
-    celsius = float(input('input celsius : '))
-    print(f'celsius: {celsius}C, fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
-  elif menu == '3':
-    print("terminate program")
-    break
+#join: 리스트를 문자열로, 원소사이 구분기호들을 임의로 붙일수 있다
+subjects = ["python", "c++", "database"]
+subjects_string = "/".join(subjects)
+print(subjects_string)
+
+numbers = input("firstnum secondnum : ").split() # 문자열을 리스트로
+print(int(numbers[0]) + int(numbers[1]))
+
