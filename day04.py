@@ -1,54 +1,27 @@
-# Assignment (add prime series program)
-while True:
-    menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Prime1   4) Prime2   5) Quit program : ")
-
-    if menu == '1':
-        fahrenheit = float(input('Input Fahrenheit : '))
-        print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
-    elif menu == '2':
-        celsius = float(input('Input Celsius : '))
-        print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
-    elif menu == '3':
-        number = int(input("Input number : "))
-        is_prime = True
-
-        if number < 2:
-            print(f'{number} is NOT prime number!')
-        else:
-            for i in range(2, number):
-                if number % i == 0:
-                    is_prime = False
-                    break
-
-            if is_prime:
-                print(f'{number} is prime number')
-            else:
-                print(f'{number} is NOT prime number!')
-    elif menu == '4':
-        numbers = input("Input first second number : ").split()
-        n1 = int(numbers[0])
-        n2 = int(numbers[1])
-
-        if n1 > n2:
-            n1, n2 = n2, n1
-
-        for number in range(n1, n2 + 1):
-            is_prime = True
-
-            if number < 2:
-                # pass
-                continue
-            else:
-                i = 2
-                while i*i < number:
-                    if number % i == 0:
-                        is_prime = False
-                        break
-                    i = i+1
-                if is_prime: print(number, end=' ')
-        print()
-    elif menu == '5':
-        print('Terminate Program.')
-        break
-    else:
-        print('Invalid Menu!')
+t1 = (5)
+t2 = 5,
+t3 = (5,)
+t4 = (5, 7)
+t5 = 5, 7
+print(type(t1), type(t2), type(t3), type(t4), type(t5))
+t6 = "python", "kim"  # packing
+print(type(t6), t6[1])
+subject, prof = t6  # unpacking
+#a, b, c = t6  # ValueError: not enough values to unpack (expected 3, got 2)
+print(prof)
+print(subject)
+t7 = ()
+t8 = tuple()
+print(type(t7), type(t8), type(9,), type((9,)))
+t9 = 1, 2, 3
+t10 = 1, 2
+print(t9 == t10)
+print(t9 <= t10)
+print(t9 > t10)
+t11 = 4.43,
+t12 = 3.97, 4.1, 3.27
+#print(t11 + t12)
+print(id(t11))
+t11 = t11 + t12  # t11 += t12
+print(id(t11))
+print(t11)
