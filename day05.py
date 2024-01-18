@@ -1,13 +1,24 @@
-# univ = ("inha university")
-# counts_alphabet = {letter: univ.count(letter) for letter in univ} #dictionary comprehension
-# print(counts_alphabet)
+def isprime(n) -> bool:
+    if n < 2:
+        return False
+    else:
+        i = 2
+        while i*i <= n:
+            if n % i == 0:
+                return False
+            i += 1
+        return True
 
-# univ = ("inha university")
-# counts_alphabet = dict()
-# for letter in univ:
-#     counts_alphabet[letter] = univ.count(letter)
-# print(counts_alphabet)
 
-#assignment 8.10
-squares = {n: pow(n, 2) for n in range(10)}
-print(squares)
+
+
+numbers = input("Input first second number : ").split()
+n1 = int(numbers[0])
+n2 = int(numbers[1])
+
+if n1 > n2:
+    n1, n2 = n2, n1
+
+for number in range(n1, n2+1):
+    if isprime(number):
+        print(number, end=' ')
