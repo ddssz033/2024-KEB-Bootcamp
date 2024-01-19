@@ -1,14 +1,22 @@
+class FlyingMixin:
+    def fly(self):
+        return f"{self.name}이(가) 하늘을 훨훨 날아갑니다~"
+
+class SwimmingMixin:
+    def swim(self):
+        return f"{self.name}이(가) 수영을 합니다."
+
 class Pokemon:
     def __init__(self, name):
         self.name = name
-        print(f'{name} 포켓몬스터 생성')
 
-    def attack(self, target):
-        print(f"{self.name}이(가) {target.name}을(를) 공격!")
+class Charizard(Pokemon, FlyingMixin):
+    pass
 
-pikachu = Pokemon("피카츄")
-squietle = Pokemon("꼬부기")
-charizard = Pokemon("리자몽")
-print(pikachu.name)
-print(squietle.name)
-charizard.attack(squietle)
+class Gyrados(Pokemon, SwimmingMixin):
+    pass
+
+g1 = Gyrados("갸라도스")
+c1 = Charizard("리자몽")
+print(c1.fly())
+print(g1.swim())
