@@ -1,10 +1,31 @@
-def squares(n):
-    return n*n
 
-even_numbers = [i for i in range(51) if i % 2 == 0]
-print(even_numbers)
-# print(tuple(map(squares, even_numbers)))
-# print(tuple(map(lambda x : x**2, even_numbers))) #익명함수 lambda -> squares와 같은 기능을 하고 있다.
 
-z = lambda x: pow(x, 2)
-print(tuple(map(z, even_numbers)))
+# 9.3
+def test(func):
+    def wrapper():
+        print("start")
+        func()
+        print("end")
+
+    return wrapper
+
+
+@test
+def call_finish():
+    print("please wait...")
+
+
+call_finish()
+
+
+# 9.4
+
+def OopsException(x, y):
+    try:
+        ans = x / y
+        print(ans)
+    except ZeroDivisionError:
+        print("Caught an oops")
+
+
+OopsException(3, 0)
