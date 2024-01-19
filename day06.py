@@ -1,31 +1,15 @@
-def good() -> list:
-    harry_porter = input().split()
-    return harry_porter
+import random
+numbers = [random.randint(1, 100) for i in range(5)]
+print(numbers)
 
-print(good())
-
-def get_odds(n):
-    for i in range(1, n+1, 2):
-        yield i
-cnt = 0
-odds = get_odds(9)
-for odd in odds:
-    cnt += 1
-    if cnt == 3:
-        print(f'Thind number is {odd}')
-        break
-
-def test(f):
-    #데코레이터 함수, 함수 시작하며 start 출력 끝나면 end 출력
-    def test_in(*args, **kwargs):
-        print('start')
-        result = f(*args, **kwargs)
-        print('end')
-        # return result
-    return test_in
-
-@test
-def greeting():
-    print("안녕하세요")
-
-greeting()
+try:
+    pick = int(input(f"input index (0 ~ {len(numbers)-1}) : "))
+    print(numbers[pick])
+except IndexError as err:
+    print(f"wrong idx number\n{err}")
+except ValueError as err:
+    print(f"input only number\n{err}")
+except ZeroDivisionError as err:
+    print(f"the denominator cannot be 0. \n{err}")
+except Exception: #가장 범위가 넓은 에러는 가장 밑으로
+    print('error occurs')
