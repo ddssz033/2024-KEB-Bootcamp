@@ -8,4 +8,10 @@ class Starting_Pokemon:
     def choosepokemon(self):
         starting = ['모부기', '팽도리', '불꽃숭이']
 
+class Pikachu:
+    def __init__(self, name, hp, fly):
+        self.name = name
+        self.hp = hp
+        self.fly_behavior = fly
+
 
